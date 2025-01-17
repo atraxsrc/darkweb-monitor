@@ -1,0 +1,53 @@
+# DarkWeb Monitor Configuration
+
+# Network Settings
+network:
+  # User agent for making requests
+  user_agent: 'Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0'
+  # Request timeout in seconds
+  timeout: 30
+  # Maximum number of retries for failed requests
+  max_retries: 3
+
+# Tor Configuration
+tor:
+  # Tor SOCKS port
+  port: 9050
+  # Tor control port
+  control_port: 9051
+  # Whether to use Tor for all requests
+  enabled: true
+
+# Search Settings
+search:
+  # Maximum results to return per source
+  max_results: 10
+  # Keywords to highlight in results
+  highlight_keywords:
+    - password
+    - credential
+    - database
+    - admin
+    - login
+
+# Output Settings
+output:
+  # Default output format (txt, json, html)
+  format: "txt"
+  # Directory to save reports
+  report_dir: "reports"
+  # Include timestamp in filenames
+  timestamp_files: true
+  # Log level (DEBUG, INFO, WARNING, ERROR)
+  log_level: "INFO"
+
+# Safety Settings
+safety:
+  # Minimum delay between requests (seconds)
+  request_delay: 2
+  # Maximum requests per minute
+  rate_limit: 10
+  # Enable caching of results
+  enable_cache: true
+  # Cache duration in hours
+  cache_duration: 24
